@@ -27,5 +27,6 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
         localStorage.setItem('users', JSON.stringify(users));
         alert('User created successfully');
         document.getElementById('signupForm').reset();
+        modal.style.display = "none";
     }
 });

@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFL Data Login</title>
     <link rel="stylesheet" href="./assets/css/style-index.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Soccer Data Login</h1>
+        <img src="./assets/images/logoForm.webp" alt="Logo" class="logo">
+        <h1>Login</h1>
         <form id="loginForm">
             <input type="text" id="loginUsername" placeholder="Username" required>
             <input type="password" id="loginPassword" placeholder="Password" required>
+            <button id="openModal" class="register-btn">Register New User</button>
             <button type="submit">Login</button>
         </form>
-        
-        <h2>Create New User</h2>
-        <form id="signupForm">
-            <input type="text" id="signupUsername" placeholder="New Username" required>
-            <input type="password" id="signupPassword" placeholder="New Password" required>
-            <button type="submit">Create User</button>
-        </form>
+
     </div>
-    
+    </div>
+
+    <!-- modal -->
+
+    <div id="registerModal" class="modal">
+        <div class="modal-card">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Create New Account</h2>
+            </div>
+            <form id="signupForm">
+                <input type="text" id="signupUsername" placeholder="New Username" required>
+                <input type="password" id="signupPassword" placeholder="New Password" required>
+                <button type="submit">Create User</button>
+            </form>
+        </div>
+    </div>
+
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/modal.js"></script>
 </body>
+
 </html>
+
+<!-- modal  -->

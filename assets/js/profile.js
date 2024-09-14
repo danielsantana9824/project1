@@ -18,7 +18,6 @@ async function fetchNFLData() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
         displayNFLData(result);
     } catch (error) {
         console.error(error);
@@ -56,7 +55,6 @@ async function displayNFLData(data) {
     teamList.className = 'nfl-team-list';
 
     data.forEach(eachEl => {
-        console.log(eachEl.team.id);
         const teamItem = document.createElement('li');
         teamItem.className = 'nfl-team-item';
 

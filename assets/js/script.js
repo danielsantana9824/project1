@@ -6,7 +6,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const users = JSON.parse(localStorage.getItem('users')) || {};
 
     if (users[username] && users[username] === password) {
-        // Successful login
         alert('Login successful!');
         document.location.replace("./profile.html");
     } else {
@@ -27,7 +26,6 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
         users[username] = password;
         localStorage.setItem('users', JSON.stringify(users));
         alert('User created successfully');
-        // Clear the signup form
         document.getElementById('signupForm').reset();
     }
 });

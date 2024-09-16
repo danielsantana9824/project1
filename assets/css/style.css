@@ -26,6 +26,12 @@ body::before {
     z-index: -1;
 }
 
+.main-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 .container {
     background-color: white;
     padding: 2rem;

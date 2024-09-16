@@ -18,7 +18,6 @@ async function fetchNFLData() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
         displayNFLData(result);
     } catch (error) {
         console.error(error);
@@ -38,17 +37,15 @@ async function fetchLiveScores() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
         return result
     } catch (error) {
-        console.error(error);
+        console.error("ver",error);
     }
 
 }
 
 async function displayNFLData(data) {
     const liveScores = await fetchLiveScores();
-    console.log(liveScores, "LiveScore:");
     const nflDataElement = document.getElementById('nflData');
 
     if(liveScores.msg){
@@ -61,7 +58,6 @@ async function displayNFLData(data) {
     teamList.className = 'nfl-team-list';
 
     data.forEach(eachEl => {
-        console.log(eachEl.team.id);
         const teamItem = document.createElement('li');
         teamItem.className = 'nfl-team-item';
 

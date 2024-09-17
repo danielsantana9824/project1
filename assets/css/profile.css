@@ -3,18 +3,21 @@ h2{
 }
 
 .nfl-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
     list-style-type: none;
     padding: 0;
 }
 
 .nfl-team-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    width: 47%;
+    padding: 5%;
+    margin-left: 1%;
+    margin-bottom: 1%;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
-    flex-wrap: wrap;
 }
 
 .nfl-team-logo {
@@ -34,4 +37,8 @@ h2{
 
 .nfl-team-info p {
     margin: 5px 0;
+}
+
+#nflData h1, h3{
+    margin-left: 20px;
 }

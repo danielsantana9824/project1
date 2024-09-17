@@ -50,7 +50,7 @@ async function displayNFLData(data) {
     const liveScores = await fetchLiveScores();
     const nflDataElement = document.getElementById('nflData');
 
-    console.log(liveScores);
+    console.log("live scores", liveScores);
     
     if(liveScores.msg){
         nflDataElement.innerHTML = `<h1>NFL Teams</h1><h3>${liveScores.msg}</h3>`;

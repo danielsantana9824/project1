@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFL Watch</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -15,11 +16,10 @@
         <form id="loginForm">
             <input type="text" id="loginUsername" placeholder="Username" required>
             <input type="password" id="loginPassword" placeholder="Password" required>
-            <button id="openModal" class="register-btn">Register New User</button>
             <button type="submit">Login</button>
+            <button id="openModal" class="register-btn">Register New User</button>
+            <h3 id="message"></h3>
         </form>
-
-    </div>
     </div>
 
     <!-- modal -->
@@ -30,11 +30,14 @@
             <div class="modal-header">
                 <h2>Create New Account</h2>
             </div>
-            <form id="signupForm">
-                <input type="text" id="signupUsername" placeholder="New Username" required>
-                <input type="password" id="signupPassword" placeholder="New Password" required>
-                <button type="submit">Create User</button>
-            </form>
+            <section class="modal-card-body">
+                <form id="signupForm">
+                    <input type="text" id="signupUsername" placeholder="New Username" required>
+                    <input type="password" id="signupPassword" placeholder="New Password" required>
+                    <button type="submit">Create User</button>
+                </form>
+            </section>
+
         </div>
     </div>
 
@@ -43,5 +46,3 @@
 </body>
 
 </html>
-
-<!-- modal  -->

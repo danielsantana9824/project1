@@ -35,7 +35,7 @@ img:hover {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
-.container {
+.log {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -137,6 +137,12 @@ form button:hover {
     text-align: center;
     position: relative;
     background-color: black;
+    border: 3px solid #a4a4a4;
+}
+
+.modal-card-body {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 /* Modal Header */

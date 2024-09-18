@@ -18,8 +18,6 @@ async function fetchNFLData() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
-        
         displayNFLData(result);
     } catch (error) {
         console.error(error);

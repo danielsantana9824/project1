@@ -16,14 +16,17 @@ async function fetchNFLData() {
 
 
     try {
+        
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
+        console.log("display NFL:", result);
         displayNFLData(result);
     } catch (error) {
         console.error(error);
     }
+    
 }
+
 
 async function fetchLiveScores() {
     const url = 'https://nfl-api-data.p.rapidapi.com/nfl-livescores';
@@ -32,6 +35,7 @@ async function fetchLiveScores() {
         headers: {
             'x-rapidapi-key': '6621f11156mshf3e3cc5016f5946p115a52jsna76dcf5ca782',
             'x-rapidapi-host': 'nfl-api-data.p.rapidapi.com'
+
         }
     };
 

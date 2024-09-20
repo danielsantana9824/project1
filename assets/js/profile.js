@@ -1,6 +1,11 @@
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     fetchNFLData();
     fetchLiveScores();
+    fetchteamSeason();
+    
 });
 
 
@@ -20,11 +25,39 @@ async function fetchNFLData() {
         const response = await fetch(url, options);
         const result = await response.json();
         displayNFLData(result);
+        console.log("NLF Data: ", result);
+        
     } catch (error) {
         console.error(error);
     }
     
 }
+
+async function fetchteamSeason() {
+    let ver = ""
+    const url = `https://nfl-api-data.p.rapidapi.com/nfl-team-info/v1/data?id=${helloworld}`;
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '6621f11156mshf3e3cc5016f5946p115a52jsna76dcf5ca782',
+		'x-rapidapi-host': 'nfl-api-data.p.rapidapi.com'
+	}
+};
+    try {
+        const response = await fetch(url, options);
+        const season = await response.json();
+       // ver = season.team.recordSummary;
+        
+        console.log(season);
+        return season
+       
+        
+    } catch (error) {
+        console.error("ver", error);
+    }
+
+}
+
 
 
 async function fetchLiveScores() {
@@ -50,6 +83,7 @@ async function fetchLiveScores() {
 
 async function displayNFLData(data) {
     const liveScores = await fetchLiveScores();
+    const season = fetchteamSeason(helloworld)
     const nflDataElement = document.getElementById('nflData');
 
     console.log("live scores", liveScores);
@@ -64,6 +98,12 @@ async function displayNFLData(data) {
     teamList.className = 'nfl-team-list';
 
     data.forEach(eachEl => {
+
+        var helloworld = fetchteamSeason(eachEl.team.id);
+      
+        
+
+
         const teamItem = document.createElement('li');
         teamItem.className = 'nfl-team-item';
 
@@ -83,6 +123,12 @@ async function displayNFLData(data) {
             <p>Conference: ${eachEl.team.location}</p>
             <p><a href="${eachEl.team.links[0].href}" target="_blank">ESPN Team Profile</a></p>
         `;
+        if (season.team.id === eachEl.team.id) {
+            const divEl = document.createElement("div");
+            divEl.innerHTML = `<p>Record: ${season.team.recordSummary}</p>`
+            teamItem.appendChild(divEl);
+        }
+    
 
         teamItem.appendChild(teamLogo);
         teamItem.appendChild(teamInfo);

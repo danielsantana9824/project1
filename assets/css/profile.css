@@ -107,6 +107,14 @@ h3 {
     text-decoration: underline;
 }
 
+.logoProfile{
+    color: white;
+    text-align: center; 
+    font-size: 6rem;
+    font-family: "New Amsterdam", sans-serif;
+
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
     .nfl-team-item {

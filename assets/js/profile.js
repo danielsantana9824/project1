@@ -25,9 +25,9 @@ async function fetchNFLData() {
     }
 }
 
+
 // Section 2: Fetch Team Season Data
 async function fetchteamSeason(teamId) {
-
     const url = `https://nfl-api-data.p.rapidapi.com/nfl-team-info/v1/data?id=${teamId}`;
     const options = {
         method: 'GET',
@@ -106,10 +106,17 @@ async function displayNFLData(data) {
         teamInfo.className = 'nfl-team-info';
 
         // STEP 4.5: Construct HTML for team information
-        let teamInfoHTML = `
-        <h3>${eachEl.team.name}</h3>
-        <p>Conference: ${eachEl.team.location}</p>
-        <p><a href="${eachEl.team.links[0].href}" target="_blank">ESPN Team Profile</a></p>
+        let teamInfoHTML = `<h3>${eachEl.team.name}</h3>`;
+        
+        // Add record summary if available
+        if (season && season.team && season.team.recordSummary) {
+            teamInfoHTML += `<p>Record: ${season.team.recordSummary}</p>`;
+        }
+
+        // Add additional team details
+        teamInfoHTML += `
+            <p>Conference: ${eachEl.team.location}</p>
+            <p><a href="${eachEl.team.links[0].href}" target="_blank">ESPN Team Profile</a></p>
         `;
 
         // STEP 4.6: Assemble the team item

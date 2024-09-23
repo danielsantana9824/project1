@@ -26,26 +26,27 @@ async function fetchNFLData() {
     }
 }
 
+
 // Section 2: Fetch Team Season Data
-// async function fetchteamSeason(teamId) {
-//     const url = `https://nfl-api-data.p.rapidapi.com/nfl-team-info/v1/data?id=${teamId}`;
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//             'x-rapidapi-key': '6621f11156mshf3e3cc5016f5946p115a52jsna76dcf5ca782',
-//             'x-rapidapi-host': 'nfl-api-data.p.rapidapi.com'
-//         }
-//     };
-//     try {
-//         const response = await fetch(url, options);
-//         const season = await response.json();
-//         console.log(season);
-//         return season;
-//     } catch (error) {
-//         console.error("Error fetching team season:", error);
-//         return null;
-//     }
-// }
+async function fetchteamSeason(teamId) {
+    const url = `https://nfl-api-data.p.rapidapi.com/nfl-team-info/v1/data?id=${teamId}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': '6621f11156mshf3e3cc5016f5946p115a52jsna76dcf5ca782',
+            'x-rapidapi-host': 'nfl-api-data.p.rapidapi.com'
+        }
+    };
+    try {
+        const response = await fetch(url, options);
+        const season = await response.json();
+        console.log(season);
+        return season;
+    } catch (error) {
+        console.error("Error fetching team season:", error);
+        return null;
+    }
+}
 
 // Section 3: Fetch Live Scores
 async function fetchLiveScores() {
@@ -89,7 +90,7 @@ async function displayNFLData(data) {
     for (const eachEl of data) {
         // STEP 4.1: Fetch team-specific season data
         const teamId = eachEl.team.id;
-        // const season = await fetchteamSeason(teamId);
+        const season = await fetchteamSeason(teamId);
 
         // STEP 4.2: Create the container for individual team information
         const teamItem = document.createElement('li');
@@ -111,9 +112,9 @@ async function displayNFLData(data) {
         let teamInfoHTML = `<h3>${eachEl.team.name}</h3>`;
         
         // Add record summary if available
-        // if (season && season.team && season.team.recordSummary) {
-        //     teamInfoHTML += `<p>Record: ${season.team.recordSummary}</p>`;
-        // }
+        if (season && season.team && season.team.recordSummary) {
+            teamInfoHTML += `<p>Record: ${season.team.recordSummary}</p>`;
+        }
 
         // Add additional team details
         teamInfoHTML += `

@@ -26,6 +26,7 @@ async function fetchNFLData() {
     }
 }
 
+
 // Section 2: Fetch Team Season Data
 async function fetchteamSeason(teamId) {
     const url = `https://nfl-api-data.p.rapidapi.com/nfl-team-info/v1/data?id=${teamId}`;

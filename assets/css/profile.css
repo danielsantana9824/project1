@@ -1,7 +1,9 @@
+/* Import custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=New+Amsterdam&display=swap');
 
 /* General Styles */
 body {
+    /* Dark background with white text for better contrast */
     background-color: #1d1f21;
     color: white;
     font-family: Arial, sans-serif;
@@ -10,6 +12,7 @@ body {
 }
 
 #nflData {
+    /* Container for NFL data with a slightly lighter background */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -20,6 +23,7 @@ body {
 
 /* Headings */
 h1 {
+    /* Main title styling using custom font */
     color: white;
     text-align: center; 
     font-size: 4rem;
@@ -41,6 +45,7 @@ h3 {
 
 /* NFL Team List */
 .nfl-team-list {
+    /* Flexbox layout for responsive team list */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -52,6 +57,7 @@ h3 {
 
 /* NFL Team Item Card */
 .nfl-team-item {
+    /* Individual team card styling */
     background-color: #3b3e44;
     width: 45%;
     padding: 15px;
@@ -63,12 +69,14 @@ h3 {
 }
 
 .nfl-team-item:hover {
+    /* Hover effect for team cards */
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* NFL Team Logo */
 .nfl-team-logo {
+    /* Circular team logo styling */
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -96,6 +104,7 @@ h3 {
 
 /* Links */
 .nfl-team-info a {
+    /* Styling for links within team info */
     color: #f7ecc0;
     text-decoration: none;
     font-weight: bold;
@@ -107,12 +116,12 @@ h3 {
     text-decoration: underline;
 }
 
-.logoProfile{
+.logoProfile {
+    /* Large logo text styling */
     color: white;
     text-align: center; 
     font-size: 6rem;
     font-family: "New Amsterdam", sans-serif;
-
 }
 
 .nfl-team-info {
@@ -120,6 +129,7 @@ h3 {
 }
 
 .marcador {
+    /* Styling for score section */
     margin-top: 10px; /* Espacio entre la información del equipo y el marcador */
     padding: 10px;
     border-top: 1px solid #ddd; /* Separación visual */

@@ -3,15 +3,17 @@ Read me
 # Proejct 1: NFL Watch
 
 ## Table of Contents
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Screenshots](#screenshots)
-- [Future Enhancements](#future-enhancements)
-- [Credits](#credits)
-- [License](#license)
+- [Proejct 1: NFL Watch](#proejct-1-nfl-watch)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Screenshots](#screenshots)
+  - [Future Enhancements](#future-enhancements)
+  - [Credits](#credits)
+  - [License](#license)
 
 ## Description
 NFL Watch is a web application designed for NFL fans to view team information and live scores. It provides a user-friendly interface for accessing up-to-date NFL data, including team listings, detailed team information, and live game scores when available.
@@ -40,13 +42,26 @@ NFL Watch is a web application designed for NFL fans to view team information an
 - NFL API for team and score data
 
 ## Screenshots
-[Add screenshots of your application here]
+
+![alt text](./assets/images/Screenshot-1.png)
+
+---
+
+![alt text](./assets/images/Screenshot-2.png)
 
 ## Future Enhancements
 - Add more detailed player statistics
 - Implement user favorites feature
 - Integrate with social media for sharing
 - Enhance the live score feature with more real-time data
+  
+**Repo:**
+
+[Github Repo](https://github.com/danielsantana9824/NFL-Watch)
+
+**Link of the web Page:**
+
+[Github Page](https://danielsantana9824.github.io/NFL-Watch/)
 
 ## Credits
 Developed by:

@@ -53,8 +53,8 @@ Developed by:
 
 - Marcello Romero
 - John Ferlito
-- Daniel D.
-- Brian.
+- Daniel Ramirez
+- Brian Soto
 
 ## License
 This project is licensed under the MIT License.

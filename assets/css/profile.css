@@ -115,6 +115,22 @@ h3 {
 
 }
 
+.nfl-team-info {
+    display: block;
+}
+
+.marcador {
+    margin-top: 10px; /* Espacio entre la información del equipo y el marcador */
+    padding: 10px;
+    border-top: 1px solid #ddd; /* Separación visual */
+    text-align: center;
+}
+
+.score-board {
+    font-size: 14px;
+    color: #333;
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
     .nfl-team-item {

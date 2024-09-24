@@ -1,19 +1,20 @@
-Read me
 
-# Proejct 1: NFL Watch
+
+
+## NFL Watch
 
 ## Table of Contents
-- [Proejct 1: NFL Watch](#proejct-1-nfl-watch)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Features](#features)
-  - [Technologies Used](#technologies-used)
-  - [Screenshots](#screenshots)
-  - [Future Enhancements](#future-enhancements)
-  - [Credits](#credits)
-  - [License](#license)
+- [NFL Watch](#nfl-watch)
+- [Table of Contents](#table-of-contents)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
+- [Credits](#credits)
+- [License](#license)
 
 ## Description
 NFL Watch is a web application designed for NFL fans to view team information and live scores. It provides a user-friendly interface for accessing up-to-date NFL data, including team listings, detailed team information, and live game scores when available.

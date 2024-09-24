@@ -194,33 +194,27 @@ form button:hover {
 }
 
 @media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-}
-
-.log {
-    width: 90%; 
-    max-width: 500px; 
-}
-
-@media (max-width: 600px) {
     .log {
-        padding: 1rem; 
-        border-radius: 8px; 
+        padding: 1rem;
+        border-radius: 8px;
+        width: 90%;
     }
 
-    form input {
-        font-size: 14px; 
+    form input, form button{
+        font-size: 14px;
     }
 
     form button {
-        font-size: 14px; 
+        padding: 8px;
     }
 }
 
 @media (max-width: 400px) {
     .log {
-        width: 95%; 
+        width: 95%;
+    }
+
+    .modal-card {
+        width: 95%;
     }
 }

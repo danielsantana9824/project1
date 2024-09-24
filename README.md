@@ -64,6 +64,10 @@ NFL Watch is a web application designed for NFL fans to view team information an
 
 [Github Page](https://danielsantana9824.github.io/NFL-Watch/)
 
+**Link of the Presentation Slide:**
+
+[Presentation Slide](https://danielsantana9824.github.io/NFL-Watch/presentation)
+
 ## Credits
 Developed by:
 

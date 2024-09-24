@@ -200,12 +200,11 @@ form button:hover {
         width: 90%;
     }
 
-    form input{
+    form input, form button{
         font-size: 14px;
     }
 
     form button {
-        font-size: 14px;
         padding: 8px;
     }
 }
